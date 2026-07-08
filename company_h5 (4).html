@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="中科跨境投资（深圳）集团有限公司——国际化标准，本地化服务。为中国商业类企业提供进入越南市场的一站式品牌出海服务，涵盖商业地产咨询、线下商业连锁、互联网营销与展会供应链。">
+<meta property="og:title" content="中科跨境投资 | 中国品牌出海越南一站式服务">
+<meta property="og:description" content="国际化标准，本地化服务——提高越南商业连锁化率，真诚服务越南人民消费升级。">
+<meta property="og:type" content="website">
+<title>中科跨境投资 | 中国品牌出海越南一站式服务</title>
+<style>
+  :root{
+    --font-sans:"PingFang SC","Microsoft YaHei","Heiti SC",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    --font-serif:Georgia,"Times New Roman",serif;
+    --ink:#0A1024;
+    --navy:#0D1730;
+    --navy-2:#132244;
+    --navy-edge:#1C2E54;
+    --gold:#C4A05F;
+    --gold-soft:#D9C08A;
+    --champagne:#E7DCC3;
+    --paper:#F3EFE4;
+    --paper-dim:#E7E0CE;
+    --ink-on-paper:#1B1A16;
+    --muted:#9AA6C4;
+    --line:rgba(196,160,95,0.28);
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--navy);
+    color:var(--champagne);
+    font-family:var(--font-sans);
+    overflow-x:hidden;
+    width:100%;
+  }
+  img{max-width:100%; display:block;}
+  .serif{font-family:var(--font-sans); font-weight:700;}
+  .num{font-family:var(--font-serif);}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .9s cubic-bezier(.22,.68,.36,1), transform .9s cubic-bezier(.22,.68,.36,1);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  .reveal-delay-1{transition-delay:.12s;}
+  .reveal-delay-2{transition-delay:.24s;}
+  .reveal-delay-3{transition-delay:.36s;}
+  .reveal-delay-4{transition-delay:.48s;}
+
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    .marquee-track{animation:none !important;}
+  }
+
+  /* ---------- section shells ---------- */
+  section{position:relative; width:100%;}
+  .pad{padding:64px 24px;}
+  .dark{background:var(--navy); color:var(--champagne);}
+  .dark-2{background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 100%); color:var(--champagne);}
+  .light{background:var(--paper); color:var(--ink-on-paper);}
+
+  .eyebrow{
+    font-family:var(--font-serif);
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    font-size:12.5px;
+    color:var(--gold);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--gold);}
+  .light .eyebrow{color:#8A6B2F;}
+  .light .eyebrow::before{background:#8A6B2F;}
+
+  h2.title{
+    font-size:29px;
+    line-height:1.4;
+    font-weight:700;
+    margin:0 0 18px;
+    letter-spacing:.01em;
+  }
+  p.lede{
+    font-size:15px;
+    line-height:1.95;
+    color:var(--muted);
+    margin:0 0 8px;
+    font-weight:300;
+  }
+  .light p.lede{color:#5B5646;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    height:100svh;
+    min-height:640px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    overflow:hidden;
+    background:#060A17;
+  }
+  .hero-img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 62%;
+    opacity:.72;
+    transform:scale(1.08);
+    animation:heroZoom 9s ease-out forwards;
+  }
+  @keyframes heroZoom{ from{transform:scale(1.14);} to{transform:scale(1.02);} }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(6,10,23,.35) 0%, rgba(6,10,23,.35) 35%, rgba(8,13,28,.86) 78%, #0A1024 100%),
+      linear-gradient(90deg, rgba(6,10,23,.55) 0%, rgba(6,10,23,0) 55%);
+    z-index:1;
+  }
+  .hero-frame{
+    position:absolute; inset:14px;
+    border:1px solid rgba(196,160,95,.35);
+    z-index:2;
+    pointer-events:none;
+  }
+  .hero-content{position:relative; z-index:3; padding:0 26px 46px;}
+  .hero-mark{
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:34px;
+  }
+  .hero-mark .diamond{width:7px;height:7px; background:var(--gold); transform:rotate(45deg);}
+  .hero-mark span{
+    font-family:var(--font-serif);
+    letter-spacing:.4em; font-size:11px; text-transform:uppercase; color:var(--gold-soft);
+  }
+  .hero h1{
+    font-family:var(--font-sans); font-weight:700;
+    font-weight:700;
+    font-size:40px;
+    line-height:1.32;
+    margin:0 0 16px;
+    color:#F6F1E4;
+    letter-spacing:.01em;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--gold);
+  }
+  .hero .sub{
+    font-size:14.5px;
+    color:var(--muted);
+    line-height:1.85;
+    max-width:30em;
+    font-weight:300;
+    border-left:1px solid var(--line);
+    padding-left:14px;
+  }
+  .scroll-cue{
+    position:absolute; bottom:16px; left:50%; transform:translateX(-50%);
+    z-index:3;
+    display:flex; flex-direction:column; align-items:center; gap:6px;
+  }
+  .scroll-cue span{font-size:10px; letter-spacing:.3em; color:var(--muted); font-family:var(--font-serif);}
+  .scroll-cue .stem{width:1px; height:26px; background:linear-gradient(180deg,var(--gold),transparent); animation:stemPulse 1.8s ease-in-out infinite;}
+  @keyframes stemPulse{0%,100%{opacity:.25;} 50%{opacity:1;}}
+
+  /* ---------- ticker ---------- */
+  .ticker{
+    background:var(--ink);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:11px 0;
+  }
+  .marquee-track{
+    display:inline-flex;
+    animation: marquee 32s linear infinite;
+    will-change:transform;
+  }
+  @keyframes marquee{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  .ticker-item{
+    display:inline-flex; align-items:baseline; gap:8px;
+    padding:0 26px;
+    font-family:var(--font-serif);
+    font-size:14px;
+    color:var(--gold-soft);
+    letter-spacing:.02em;
+  }
+  .ticker-item b{color:#F6F1E4; font-size:16px; font-weight:600;}
+  .ticker-item::after{content:"◆"; font-size:6px; color:var(--gold); margin-left:26px;}
+
+  /* ---------- stat grid ---------- */
+  .stat-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    margin-top:30px;
+    border:1px solid var(--line);
+  }
+  .stat-cell{
+    background:var(--navy);
+    padding:22px 16px;
+  }
+  .stat-num{
+    font-family:var(--font-serif);
+    font-size:34px;
+    font-weight:600;
+    color:var(--gold-soft);
+    line-height:1;
+    display:flex;
+    align-items:baseline;
+    gap:2px;
+  }
+  .stat-num .unit{font-size:16px; color:var(--gold);}
+  .stat-label{
+    margin-top:8px;
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.6;
+    font-weight:300;
+  }
+
+  .insight-list{margin-top:26px; display:flex; flex-direction:column; gap:0;}
+  .insight-row{
+    display:flex; gap:14px;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .insight-row:last-child{border-bottom:1px solid var(--line);}
+  .insight-row .mk{
+    font-family:var(--font-serif);
+    color:var(--gold);
+    font-size:13px;
+    letter-spacing:.06em;
+    min-width:34px;
+    padding-top:2px;
+  }
+  .insight-row p{margin:0; font-size:13.5px; line-height:1.85; color:var(--champagne); font-weight:300;}
+  .insight-row p b{color:var(--gold-soft); font-weight:600;}
+
+  /* ---------- about ---------- */
+  .about-visual{
+    background:#EDE7D6;
+    border:1px solid rgba(139,107,47,.25);
+    padding:20px 10px;
+    margin:0 0 30px;
+  }
+  .about-visual svg{width:100%; height:auto; display:block;}
+  .about-body p{
+    font-size:14px; line-height:2.05; color:#4A4636; font-weight:400; margin:0 0 16px;
+  }
+  .about-body p b{color:#1B1A16; font-weight:700;}
+
+  .division-list{margin-top:8px; border-top:1px solid rgba(139,107,47,.25);}
+  .division{
+    display:flex; gap:16px;
+    padding:20px 0;
+    border-bottom:1px solid rgba(139,107,47,.25);
+  }
+  .division .rn{
+    font-family:var(--font-serif);
+    font-size:26px;
+    font-weight:500;
+    color:#B5872B;
+    line-height:1;
+    min-width:38px;
+  }
+  .division h3{margin:0 0 6px; font-size:16px; font-weight:700; color:#1B1A16;}
+  .division p{margin:0; font-size:12.5px; line-height:1.75; color:#6b6552; font-weight:400;}
+
+  /* ---------- projects ---------- */
+  .project-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:28px;
+  }
+  .project-card{
+    position:relative; overflow:hidden;
+    aspect-ratio:3/4;
+    background:linear-gradient(155deg, #182A54, var(--navy-2));
+    border:1px solid var(--line);
+  }
+  .card-icon{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    padding-bottom:30%;
+  }
+  .card-icon svg{width:42%; height:42%; opacity:.9;}
+  .project-card .tagbox{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(10,16,36,0) 40%, rgba(10,16,36,.92) 100%);
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:14px;
+  }
+  .project-card .tag{
+    font-size:9.5px; letter-spacing:.2em; color:var(--gold); text-transform:uppercase; margin-bottom:6px;
+  }
+  .project-card h4{margin:0; font-size:14.5px; color:#F6F1E4; font-weight:600; line-height:1.4;}
+  .project-card.pending{
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(155deg, var(--navy-2), var(--ink));
+  }
+  .project-card.pending .pending-inner{text-align:center; padding:14px;}
+  .project-card.pending .plus{
+    width:34px;height:34px;border:1px solid var(--gold); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; margin:0 auto 12px;
+    color:var(--gold); font-size:16px; font-weight:300;
+  }
+  .project-card.pending h4{color:var(--gold-soft); font-size:13.5px;}
+  .project-card.pending .soon{font-size:10px; letter-spacing:.15em; color:var(--muted); margin-top:6px; display:block;}
+
+  /* service rows (icon style) */
+  .service-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:28px;
+  }
+  .service-card{
+    background:var(--navy-2);
+    border:1px solid var(--line);
+    padding:18px 14px;
+  }
+  .service-card .ic{
+    width:30px; height:30px; border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:12px;
+    color:var(--gold); font-size:13px; font-family:var(--font-serif);
+  }
+  .service-card h4{margin:0 0 6px; font-size:13.5px; color:#F6F1E4; font-weight:600;}
+  .service-card p{margin:0; font-size:11.5px; line-height:1.65; color:var(--muted); font-weight:300;}
+
+  /* ---------- expo ---------- */
+  .expo-hero{margin:0 -24px 0; position:relative;}
+  .expo-hero svg{width:100%; height:210px; display:block;}
+  .expo-hero .cap{
+    position:absolute; left:24px; bottom:14px; right:24px;
+    color:#F6F1E4; font-size:12px; letter-spacing:.05em;
+    background:rgba(10,16,36,.55); backdrop-filter:blur(2px);
+    padding:8px 12px; border-left:2px solid var(--gold);
+  }
+  .achv-strip{
+    display:flex; gap:10px; overflow-x:auto; margin:26px -24px 0; padding:0 24px 6px;
+    scrollbar-width:none;
+  }
+  .achv-strip::-webkit-scrollbar{display:none;}
+  .achv-chip{
+    flex:0 0 auto;
+    background:rgba(196,160,95,.08);
+    border:1px solid var(--line);
+    color:var(--gold-soft);
+    font-size:12px;
+    padding:9px 15px;
+    white-space:nowrap;
+  }
+  .light .achv-chip{background:rgba(139,107,47,.07); border-color:rgba(139,107,47,.3); color:#8A6B2F;}
+
+  .expo-photos{display:grid; grid-template-columns:1.3fr 1fr; gap:10px; margin-top:22px;}
+  .expo-icon-card{
+    background:rgba(139,107,47,.06);
+    border:1px solid rgba(139,107,47,.25);
+    height:150px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;
+  }
+  .expo-icon-card svg{width:40px; height:40px;}
+  .expo-icon-card span{font-size:12px; color:#6b6552; letter-spacing:.03em;}
+
+  .upcoming{
+    margin-top:26px;
+    border:1px solid var(--line);
+    padding:20px 18px;
+    display:flex; align-items:center; gap:16px;
+    background:rgba(196,160,95,.06);
+  }
+  .upcoming .date{
+    font-family:var(--font-serif); font-size:30px; color:var(--gold); line-height:1; text-align:center;
+  }
+  .upcoming .date small{display:block; font-size:10px; letter-spacing:.15em; color:var(--muted); margin-top:4px;}
+  .upcoming .txt h4{margin:0 0 4px; font-size:14px; color:#F6F1E4;}
+  .upcoming .txt span{font-size:11.5px; color:var(--muted);}
+
+  .tagchips{display:flex; flex-wrap:wrap; gap:9px; margin-top:24px;}
+  .tagchip{
+    border:1px solid var(--line); padding:8px 14px; font-size:12px; color:var(--champagne);
+    display:flex; align-items:center; gap:6px;
+  }
+  .tagchip .dot{width:4px;height:4px; background:var(--gold); border-radius:50%;}
+
+  /* ---------- closing ---------- */
+  .closing{
+    position:relative;
+    min-height:78vh;
+    display:flex; flex-direction:column; justify-content:center;
+    overflow:hidden;
+  }
+  .closing-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.34;}
+  .closing::before{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, var(--navy) 0%, rgba(13,23,48,.75) 40%, var(--navy) 100%);
+  }
+  .closing-content{position:relative; z-index:2; padding:60px 26px;}
+  .closing .eyebrow{color:var(--gold);}
+  .closing .eyebrow::before{background:var(--gold);}
+  .manifesto{
+    font-family:var(--font-sans); font-weight:700;
+    font-size:23px;
+    line-height:1.75;
+    color:#F6F1E4;
+    font-weight:700;
+    margin:0 0 30px;
+  }
+  .manifesto .accent{color:var(--gold);}
+  .closing-meta{
+    display:flex; flex-direction:column; gap:14px;
+    border-top:1px solid var(--line);
+    padding-top:24px;
+  }
+  .closing-meta .row{display:flex; justify-content:space-between; font-size:12.5px; color:var(--muted);}
+  .closing-meta .row b{color:var(--gold-soft); font-weight:500; letter-spacing:.03em;}
+
+  footer{
+    background:var(--ink);
+    padding:26px 24px 34px;
+    text-align:center;
+  }
+  footer .fname{font-family:var(--font-sans); font-weight:700; font-size:13px; color:var(--gold-soft); letter-spacing:.04em; margin-bottom:8px;}
+  footer .fsub{font-size:10.5px; color:#5C6688; letter-spacing:.08em;}
+
+  @media (min-width:600px){
+    .pad{padding:88px 48px;}
+    .hero-content{padding:0 48px 60px;}
+    h2.title{font-size:34px;}
+    .stat-grid{grid-template-columns:repeat(4,1fr);}
+    .project-grid{grid-template-columns:repeat(4,1fr);}
+    .service-grid{grid-template-columns:repeat(3,1fr);}
+    .about-visual{padding:32px 24px;}
+    .expo-hero{margin:0 0 0;}
+    .achv-strip{margin:26px 0 0; padding:0 0 6px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-img" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="深圳至河内跨境航线示意图">
+    <defs>
+      <radialGradient id="heroGlow" cx="50%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#1C2E54"/>
+        <stop offset="100%" stop-color="#060A17"/>
+      </radialGradient>
+      <linearGradient id="skylineFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#16234A"/>
+        <stop offset="100%" stop-color="#0A1024"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="1000" fill="url(#heroGlow)"/>
+    <!-- faint map dot grid -->
+    <g fill="#2A3A66" opacity="0.5">
+      <circle cx="80" cy="120" r="2"/><circle cx="180" cy="90" r="2"/><circle cx="280" cy="160" r="2"/>
+      <circle cx="400" cy="80" r="2"/><circle cx="520" cy="140" r="2"/><circle cx="640" cy="100" r="2"/>
+      <circle cx="720" cy="200" r="2"/><circle cx="140" cy="240" r="2"/><circle cx="340" cy="260" r="2"/>
+      <circle cx="580" cy="240" r="2"/><circle cx="460" cy="200" r="2"/><circle cx="220" cy="320" r="2"/>
+    </g>
+    <!-- trade route arc: Shenzhen -> Hanoi -->
+    <path d="M 150,260 Q 420,120 660,420" fill="none" stroke="#C4A05F" stroke-width="1.6" stroke-dasharray="2 8" opacity="0.85"/>
+    <circle cx="150" cy="260" r="5" fill="#0A1024" stroke="#C4A05F" stroke-width="2"/>
+    <circle cx="660" cy="420" r="5" fill="#0A1024" stroke="#C4A05F" stroke-width="2"/>
+    <text x="164" y="250" fill="#D9C08A" font-size="15" letter-spacing="1" font-family="Georgia, serif">SHENZHEN</text>
+    <text x="580" y="450" fill="#D9C08A" font-size="15" letter-spacing="1" font-family="Georgia, serif">HANOI</text>
+    <!-- skyline silhouette -->
+    <g fill="url(#skylineFade)">
+      <rect x="0" y="640" width="60" height="360"/>
+      <rect x="70" y="580" width="46" height="420"/>
+      <rect x="126" y="660" width="54" height="340"/>
+      <rect x="190" y="520" width="40" height="480"/>
+      <rect x="240" y="600" width="60" height="400"/>
+      <rect x="310" y="560" width="42" height="440"/>
+      <rect x="360" y="470" width="50" height="530"/>
+      <rect x="418" y="600" width="56" height="400"/>
+      <rect x="482" y="540" width="44" height="460"/>
+      <rect x="534" y="620" width="60" height="380"/>
+      <rect x="602" y="560" width="46" height="440"/>
+      <rect x="656" y="600" width="54" height="400"/>
+      <rect x="718" y="640" width="50" height="360"/>
+      <rect x="776" y="590" width="24" height="410"/>
+    </g>
+  </svg>
+  <div class="hero-frame"></div>
+  <div class="hero-content">
+    <div class="hero-mark"><span class="diamond"></span><span>ZHONGKE CROSS-BORDER INVESTMENT GROUP</span></div>
+    <h1>国际化标准<br><em>本地化服务</em></h1>
+    <div class="sub">中科跨境投资（深圳）集团有限公司 —— 总部深圳，深耕越南，为中国商业类企业提供进入越南市场的一站式品牌出海服务。</div>
+  </div>
+  <div class="scroll-cue"><div class="stem"></div><span>SCROLL</span></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- MARKET OPPORTUNITY -->
+<section class="dark pad">
+  <div class="eyebrow">Market Insight</div>
+  <h2 class="title reveal">国际视角下的<br>新兴消费热土</h2>
+  <p class="lede reveal reveal-delay-1">制造基石叠加消费浪潮，越南正崛起为驱动未来的"双引擎经济体"。顶级机构共识：越南锁定东南亚未来五年最具潜力中产市场；星巴克、海底捞、蜜雪冰城等国际巨头已抢先布局。山水相连、人口年轻，越南正成为中国品牌高效扩张的"新蓝海"。</p>
+
+  <div class="stat-grid reveal reveal-delay-2">
+    <div class="stat-cell"><div class="stat-num" data-count="8.02" data-suffix="%">0<span class="unit">%</span></div><div class="stat-label">2025年越南GDP<br>同比增长</div></div>
+    <div class="stat-cell"><div class="stat-num" data-count="10.37" data-suffix="%">0<span class="unit">%</span></div><div class="stat-label">餐饮服务市场<br>2025–2030 CAGR</div></div>
+    <div class="stat-cell"><div class="stat-num" data-count="14.2" data-suffix="%">0<span class="unit">%</span></div><div class="stat-label">住宿餐饮零售额<br>2025年同比增长</div></div>
+    <div class="stat-cell"><div class="stat-num" data-count="1.06" data-suffix="亿">0<span class="unit">亿</span></div><div class="stat-label">越南总人口<br>年龄中位数33.4岁</div></div>
+    <div class="stat-cell"><div class="stat-num" data-count="880" data-suffix="万">0<span class="unit">万户</span></div><div class="stat-label">2027年预计<br>中产家庭数量</div></div>
+    <div class="stat-cell"><div class="stat-num" data-count="2036" data-suffix="">0</div><div class="stat-label">人口黄金结构期<br>预计持续至</div></div>
+    <div class="stat-cell"><div class="stat-num" data-count="30" data-suffix="%">0<span class="unit">%</span></div><div class="stat-label">2025年预计越南<br>餐饮连锁渗透率</div></div>
+    <div class="stat-cell"><div class="stat-num" data-count="12.6" data-suffix="%">0<span class="unit">%</span></div><div class="stat-label">特色餐饮社交聚餐<br>人均月支出增速</div></div>
+  </div>
+
+  <div class="insight-list reveal reveal-delay-3">
+    <div class="insight-row"><div class="mk">01</div><p>越南拥有超 <b>1.06亿</b> 人口，人口结构年轻，"人口黄金结构期"预计持续至 <b>2036年</b>。</p></div>
+    <div class="insight-row"><div class="mk">02</div><p>全球品牌竞相落子：<b>星巴克、海底捞、蜜雪冰城</b> 等国际巨头已抢先布局越南市场。</p></div>
+    <div class="insight-row"><div class="mk">03</div><p>"特色餐饮 + 社交型聚餐" 场景消费升级明显，人均月支出同比增长 <b>12.6%</b>。</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="light pad">
+  <div class="about-visual reveal">
+    <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="深圳总部与河内业务中心跨境协作示意图">
+      <line x1="150" y1="130" x2="550" y2="130" stroke="#C9A967" stroke-width="1.4" stroke-dasharray="3 7"/>
+      <path d="M150,130 l10,-5 v10 z" fill="#C9A967"/>
+      <path d="M550,130 l-10,-5 v10 z" fill="#C9A967"/>
+      <circle cx="150" cy="130" r="46" fill="none" stroke="#8A6B2F" stroke-width="1.4"/>
+      <circle cx="550" cy="130" r="46" fill="none" stroke="#8A6B2F" stroke-width="1.4"/>
+      <text x="150" y="122" text-anchor="middle" font-size="13" fill="#8A6B2F" letter-spacing="0.5" font-family="Georgia, serif">HQ</text>
+      <text x="150" y="144" text-anchor="middle" font-size="15" fill="#1B1A16" font-weight="700">深圳总部</text>
+      <text x="550" y="122" text-anchor="middle" font-size="13" fill="#8A6B2F" letter-spacing="0.5" font-family="Georgia, serif">BRANCH</text>
+      <text x="550" y="144" text-anchor="middle" font-size="15" fill="#1B1A16" font-weight="700">河内业务中心</text>
+      <text x="350" y="112" text-anchor="middle" font-size="11" fill="#8A6B2F" letter-spacing="2" font-family="Georgia, serif">CROSS-BORDER</text>
+    </svg>
+  </div>
+  <div class="eyebrow">About Us</div>
+  <h2 class="title reveal">中科跨境投资<br>品牌出海一站式伙伴</h2>
+  <div class="about-body reveal reveal-delay-1">
+    <p><b>中科跨境投资（深圳）集团有限公司</b>总部位于中国<b>深圳</b>，是越南领先的品牌运营投资公司，是深圳高科技企业协同创新促进会、深圳福田区总商会等 <b>10余家</b> 行业协会在越南的服务代表处，并在越南首都河内设立业务中心。</p>
+    <p>公司以<b>"国际化标准、本地化服务"</b>理念，为中国商业类企业提供进入越南市场定制化的一站式品牌出海服务，致力于提高越南商业连锁化率，真诚服务越南人民消费升级。</p>
+  </div>
+
+  <div class="division-list reveal reveal-delay-2">
+    <div class="division"><div class="rn">I</div><div><h3>商业地产咨询与投资部</h3><p>市场调研、商铺选址与商业资源对接</p></div></div>
+    <div class="division"><div class="rn">II</div><div><h3>商业连锁线下事业部</h3><p>财税合规、设计装修、团队搭建与营销推广</p></div></div>
+    <div class="division"><div class="rn">III</div><div><h3>互联网营销事业部</h3><p>TikTok运营、直播电商、内容创作</p></div></div>
+    <div class="division"><div class="rn">IV</div><div><h3>展会供应链事业部</h3><p>展会策划设计、招商运营与供应链服务</p></div></div>
+  </div>
+</section>
+
+<!-- REAL ESTATE -->
+<section class="dark-2 pad">
+  <div class="eyebrow">Commercial Real Estate</div>
+  <h2 class="title reveal">商业地产<br>咨询与投资</h2>
+  <p class="lede reveal reveal-delay-1">依托本地数据与实地经验，评估并推荐核心城市优质商圈与点位，综合权衡客流、租金、竞争环境与政策条件，锁定最优解。</p>
+
+  <div class="project-grid reveal reveal-delay-2">
+    <div class="project-card pending">
+      <div class="pending-inner">
+        <div class="plus">+</div>
+        <h4>越南首家<br>中华美食城</h4>
+        <span class="soon">筹备中 · COMING SOON</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#D9C08A" stroke-width="1.6"><path d="M12 16 L14 10 H34 L36 16"/><rect x="9" y="16" width="30" height="24" rx="1"/><path d="M18 22 v4 a6 6 0 0 0 12 0 v-4"/></svg></div>
+      <div class="tagbox"><div class="tag">Landmark 01</div><h4>越南第一家<br>奥特莱斯</h4></div>
+    </div>
+    <div class="project-card">
+      <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#D9C08A" stroke-width="1.6"><circle cx="24" cy="24" r="15"/><path d="M24 9 v30 M9 24 h30" stroke-dasharray="1 5"/><circle cx="24" cy="24" r="4" fill="#D9C08A" stroke="none"/></svg></div>
+      <div class="tagbox"><div class="tag">Landmark 02</div><h4>越南第一家<br>二次元商场</h4></div>
+    </div>
+    <div class="project-card">
+      <div class="card-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#D9C08A" stroke-width="1.6"><rect x="7" y="12" width="34" height="28" rx="1"/><path d="M7 20 h34 M16 20 v20 M24 20 v20 M32 20 v20"/></svg></div>
+      <div class="tagbox"><div class="tag">Landmark 03</div><h4>越南国家级<br>专业市场</h4></div>
+    </div>
+  </div>
+
+  <div class="service-grid reveal reveal-delay-3">
+    <div class="service-card"><div class="ic">01</div><h4>专项考察</h4><p>市场趋势、竞品摸排与供应链初探，助您精准决策。</p></div>
+    <div class="service-card"><div class="ic">02</div><h4>商铺选址</h4><p>胡志明、河内、岘港核心商圈点位评估与推荐。</p></div>
+    <div class="service-card"><div class="ic">03</div><h4>财税合规</h4><p>公司注册、证照税务、记账审计全套本地合规服务。</p></div>
+    <div class="service-card"><div class="ic">04</div><h4>设计装修</h4><p>符合本土审美的品牌VI与消防环保达标施工落地。</p></div>
+    <div class="service-card"><div class="ic">05</div><h4>团队搭建</h4><p>核心岗位招募、组织架构与本地劳动法规咨询。</p></div>
+    <div class="service-card"><div class="ic">06</div><h4>营销推广</h4><p>Facebook / Zalo / TikTok 与线下开业活动引流。</p></div>
+  </div>
+</section>
+
+<!-- EXPO -->
+<section class="light pad" style="padding-left:0; padding-right:0;">
+  <div style="padding:0 24px;">
+    <div class="eyebrow">Exhibition &amp; Supply Chain</div>
+    <h2 class="title reveal">展会供应链<br>事业部</h2>
+  </div>
+
+  <div class="expo-hero reveal reveal-delay-1">
+    <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="千人大会现场示意">
+      <rect width="800" height="420" fill="#13213F"/>
+      <g fill="#C9A967" opacity="0.85">
+        <!-- podium -->
+        <rect x="370" y="70" width="60" height="70" rx="2"/>
+        <circle cx="400" cy="55" r="12"/>
+      </g>
+      <g fill="#3A4E82"><circle cx="20" cy="190" r="5"/><circle cx="52" cy="190" r="5"/><circle cx="84" cy="190" r="5"/><circle cx="116" cy="190" r="5"/><circle cx="148" cy="190" r="5"/><circle cx="180" cy="190" r="5"/><circle cx="212" cy="190" r="5"/><circle cx="244" cy="190" r="5"/><circle cx="276" cy="190" r="5"/><circle cx="308" cy="190" r="5"/><circle cx="340" cy="190" r="5"/><circle cx="372" cy="190" r="5"/><circle cx="404" cy="190" r="5"/><circle cx="436" cy="190" r="5"/><circle cx="468" cy="190" r="5"/><circle cx="500" cy="190" r="5"/><circle cx="532" cy="190" r="5"/><circle cx="564" cy="190" r="5"/><circle cx="596" cy="190" r="5"/><circle cx="628" cy="190" r="5"/><circle cx="660" cy="190" r="5"/><circle cx="692" cy="190" r="5"/><circle cx="724" cy="190" r="5"/><circle cx="756" cy="190" r="5"/><circle cx="40" cy="222" r="5"/><circle cx="72" cy="222" r="5"/><circle cx="104" cy="222" r="5"/><circle cx="136" cy="222" r="5"/><circle cx="168" cy="222" r="5"/><circle cx="200" cy="222" r="5"/><circle cx="232" cy="222" r="5"/><circle cx="264" cy="222" r="5"/><circle cx="296" cy="222" r="5"/><circle cx="328" cy="222" r="5"/><circle cx="360" cy="222" r="5"/><circle cx="392" cy="222" r="5"/><circle cx="424" cy="222" r="5"/><circle cx="456" cy="222" r="5"/><circle cx="488" cy="222" r="5"/><circle cx="520" cy="222" r="5"/><circle cx="552" cy="222" r="5"/><circle cx="584" cy="222" r="5"/><circle cx="616" cy="222" r="5"/><circle cx="648" cy="222" r="5"/><circle cx="680" cy="222" r="5"/><circle cx="712" cy="222" r="5"/><circle cx="744" cy="222" r="5"/><circle cx="776" cy="222" r="5"/><circle cx="20" cy="254" r="5"/><circle cx="52" cy="254" r="5"/><circle cx="84" cy="254" r="5"/><circle cx="116" cy="254" r="5"/><circle cx="148" cy="254" r="5"/><circle cx="180" cy="254" r="5"/><circle cx="212" cy="254" r="5"/><circle cx="244" cy="254" r="5"/><circle cx="276" cy="254" r="5"/><circle cx="308" cy="254" r="5"/><circle cx="340" cy="254" r="5"/><circle cx="372" cy="254" r="5"/><circle cx="404" cy="254" r="5"/><circle cx="436" cy="254" r="5"/><circle cx="468" cy="254" r="5"/><circle cx="500" cy="254" r="5"/><circle cx="532" cy="254" r="5"/><circle cx="564" cy="254" r="5"/><circle cx="596" cy="254" r="5"/><circle cx="628" cy="254" r="5"/><circle cx="660" cy="254" r="5"/><circle cx="692" cy="254" r="5"/><circle cx="724" cy="254" r="5"/><circle cx="756" cy="254" r="5"/><circle cx="40" cy="286" r="5"/><circle cx="72" cy="286" r="5"/><circle cx="104" cy="286" r="5"/><circle cx="136" cy="286" r="5"/><circle cx="168" cy="286" r="5"/><circle cx="200" cy="286" r="5"/><circle cx="232" cy="286" r="5"/><circle cx="264" cy="286" r="5"/><circle cx="296" cy="286" r="5"/><circle cx="328" cy="286" r="5"/><circle cx="360" cy="286" r="5"/><circle cx="392" cy="286" r="5"/><circle cx="424" cy="286" r="5"/><circle cx="456" cy="286" r="5"/><circle cx="488" cy="286" r="5"/><circle cx="520" cy="286" r="5"/><circle cx="552" cy="286" r="5"/><circle cx="584" cy="286" r="5"/><circle cx="616" cy="286" r="5"/><circle cx="648" cy="286" r="5"/><circle cx="680" cy="286" r="5"/><circle cx="712" cy="286" r="5"/><circle cx="744" cy="286" r="5"/><circle cx="776" cy="286" r="5"/><circle cx="20" cy="318" r="5"/><circle cx="52" cy="318" r="5"/><circle cx="84" cy="318" r="5"/><circle cx="116" cy="318" r="5"/><circle cx="148" cy="318" r="5"/><circle cx="180" cy="318" r="5"/><circle cx="212" cy="318" r="5"/><circle cx="244" cy="318" r="5"/><circle cx="276" cy="318" r="5"/><circle cx="308" cy="318" r="5"/><circle cx="340" cy="318" r="5"/><circle cx="372" cy="318" r="5"/><circle cx="404" cy="318" r="5"/><circle cx="436" cy="318" r="5"/><circle cx="468" cy="318" r="5"/><circle cx="500" cy="318" r="5"/><circle cx="532" cy="318" r="5"/><circle cx="564" cy="318" r="5"/><circle cx="596" cy="318" r="5"/><circle cx="628" cy="318" r="5"/><circle cx="660" cy="318" r="5"/><circle cx="692" cy="318" r="5"/><circle cx="724" cy="318" r="5"/><circle cx="756" cy="318" r="5"/></g>
+    </svg>
+    <div class="cap">已成功举办三场千人大会</div>
+  </div>
+
+  <div style="padding:0 24px;">
+    <div class="achv-strip reveal reveal-delay-2">
+      <div class="achv-chip">越南首届半导体展</div>
+      <div class="achv-chip">智能制造展</div>
+      <div class="achv-chip">潮玩节</div>
+      <div class="achv-chip">2026 中国名品越南巡展 · 筹办中</div>
+    </div>
+
+    <div class="expo-photos reveal reveal-delay-2">
+      <div class="expo-icon-card">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#8A6B2F" stroke-width="1.6"><rect x="8" y="8" width="32" height="32" rx="2"/><circle cx="24" cy="24" r="6"/><path d="M24 8 v6 M24 34 v6 M8 24 h6 M34 24 h6 M13 13 l4 4 M31 13 l-4 4 M13 35 l4 -4 M31 35 l-4 -4"/></svg>
+        <span>智能制造展</span>
+      </div>
+      <div class="expo-icon-card">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#8A6B2F" stroke-width="1.6"><path d="M24 6 L42 18 V42 H6 V18 Z"/><path d="M18 42 V26 H30 V42"/></svg>
+        <span>展台搭建</span>
+      </div>
+    </div>
+
+    <div class="upcoming reveal reveal-delay-3">
+      <div class="date">2026<small>JUL</small></div>
+      <div class="txt"><h4>越南工业园区成就展</h4><span>筹备中 · Preparing Now</span></div>
+    </div>
+
+    <div class="tagchips reveal reveal-delay-3">
+      <div class="tagchip"><span class="dot"></span>展台搭建</div>
+      <div class="tagchip"><span class="dot"></span>展会设计</div>
+      <div class="tagchip"><span class="dot"></span>展会策划</div>
+      <div class="tagchip"><span class="dot"></span>设备租赁</div>
+      <div class="tagchip"><span class="dot"></span>运营招商</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <svg class="closing-img" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="跨境航线示意图">
+    <rect width="800" height="1000" fill="#0A1024"/>
+    <g fill="#2A3A66" opacity="0.5">
+      <circle cx="700" cy="150" r="2"/><circle cx="600" cy="90" r="2"/><circle cx="500" cy="160" r="2"/>
+      <circle cx="380" cy="80" r="2"/><circle cx="260" cy="140" r="2"/><circle cx="140" cy="100" r="2"/>
+      <circle cx="60" cy="200" r="2"/><circle cx="640" cy="240" r="2"/><circle cx="440" cy="260" r="2"/>
+      <circle cx="200" cy="240" r="2"/><circle cx="320" cy="200" r="2"/><circle cx="560" cy="320" r="2"/>
+    </g>
+    <path d="M 650,260 Q 380,120 140,420" fill="none" stroke="#C4A05F" stroke-width="1.6" stroke-dasharray="2 8" opacity="0.7"/>
+    <circle cx="650" cy="260" r="5" fill="#0A1024" stroke="#C4A05F" stroke-width="2"/>
+    <circle cx="140" cy="420" r="5" fill="#0A1024" stroke="#C4A05F" stroke-width="2"/>
+    <g fill="#0F1B3D" opacity="0.9">
+      <rect x="0" y="700" width="60" height="300"/><rect x="70" y="650" width="46" height="350"/>
+      <rect x="126" y="720" width="54" height="280"/><rect x="190" y="600" width="40" height="400"/>
+      <rect x="240" y="670" width="60" height="330"/><rect x="310" y="630" width="42" height="370"/>
+      <rect x="360" y="560" width="50" height="440"/><rect x="418" y="670" width="56" height="330"/>
+      <rect x="482" y="610" width="44" height="390"/><rect x="534" y="690" width="60" height="310"/>
+      <rect x="602" y="630" width="46" height="370"/><rect x="656" y="670" width="54" height="330"/>
+      <rect x="718" y="700" width="50" height="300"/><rect x="776" y="660" width="24" height="340"/>
+    </g>
+  </svg>
+  <div class="closing-content">
+    <div class="eyebrow">Our Mission</div>
+    <p class="manifesto reveal">提高越南<span class="accent">商业连锁化率</span>，<br>真诚服务越南人民<span class="accent">消费升级</span>。</p>
+    <div class="closing-meta reveal reveal-delay-1">
+      <div class="row"><span>业务定位</span><b>中国商业企业出海越南 · 一站式服务</b></div>
+      <div class="row"><span>核心理念</span><b>国际化标准 · 本地化服务</b></div>
+      <div class="row"><span>集团总部</span><b>中国 · 深圳</b></div>
+      <div class="row"><span>越南据点</span><b>河内</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fname">中科跨境投资（深圳）集团有限公司</div>
+  <div class="fsub">ZHONGKE CROSS-BORDER INVESTMENT (SHENZHEN) GROUP CO., LTD.</div>
+</footer>
+
+<script>
+  // ticker content
+  const tickerData = [
+    ['GDP增长','8.02%'],['餐饮CAGR','10.37%'],['零售额增长','14.2%'],
+    ['总人口','1.06亿'],['中产家庭(2027)','880万户'],['连锁渗透率','30%'],
+    ['人均月支出增速','12.6%'],['黄金人口期至','2036']
+  ];
+  const track = document.getElementById('marqueeTrack');
+  function buildTicker(){
+    let html='';
+    for(let r=0;r<2;r++){
+      tickerData.forEach(([label,val])=>{
+        html += `<span class="ticker-item">${label} <b>${val}</b></span>`;
+      });
+    }
+    track.innerHTML = html;
+  }
+  buildTicker();
+
+  // reveal on scroll
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  // count-up stats
+  function animateCount(el){
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const isInt = Number.isInteger(target) && target > 100;
+    const dur = 1400;
+    const start = performance.now();
+    const unitSpan = el.querySelector('.unit');
+    function frame(now){
+      const p = Math.min(1, (now-start)/dur);
+      const eased = 1 - Math.pow(1-p, 3);
+      const val = target*eased;
+      const text = isInt ? Math.round(val).toString() : val.toFixed(2).replace(/0$/,'').replace(/\.$/,'');
+      el.childNodes[0].nodeValue = isInt ? Math.round(val).toString() : (val).toFixed(target % 1 === 0 ? 0 : 2);
+      if(p<1){ requestAnimationFrame(frame); } else {
+        el.childNodes[0].nodeValue = isInt ? target.toString() : target.toString();
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  const statObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        animateCount(e.target);
+        statObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('.stat-num').forEach(el=>statObserver.observe(el));
+</script>
+</body>
+</html>
